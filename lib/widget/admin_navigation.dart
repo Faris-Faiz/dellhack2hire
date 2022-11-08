@@ -3,10 +3,10 @@ import 'package:dellhack2hire/pages/login_screen.dart';
 import 'package:dellhack2hire/pages/profile.dart';
 import 'package:flutter/material.dart';
 
-class NavigationDrawerWidget extends StatelessWidget {
+class AdminNavigationDrawerWidget extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 20);
 
-  const NavigationDrawerWidget({super.key});
+  const AdminNavigationDrawerWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,50 +37,56 @@ class NavigationDrawerWidget extends StatelessWidget {
 
 
             Container(
-              padding: padding,
-              child: Column(
-                children: [
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'FAQs',
-                    icon: Icons.question_mark,
-                    // onClicked: () => selectedItem(context, 0),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Tutorials',
-                    icon: Icons.book,
-                    // onClicked: () => selectedItem(context, 1),
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Settings',
-                    icon: Icons.settings,
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Getting Here',
-                    icon: Icons.map,
-                  ),
+                padding: padding,
+                child: Column(
+                    children: [
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'FAQs',
+                        icon: Icons.question_mark,
+                        // onClicked: () => selectedItem(context, 0),
+                      ),
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'Tutorials',
+                        icon: Icons.book,
+                        // onClicked: () => selectedItem(context, 1),
+                      ),
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'Settings',
+                        icon: Icons.settings,
+                      ),
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'Getting Here',
+                        icon: Icons.map,
+                      ),
 
-                  //Divider line
-                  const SizedBox(height: 24),
-                  const Divider(color: Colors.white70),
-                  const SizedBox(height: 24),
+                      //Divider line
+                      const SizedBox(height: 24),
+                      const Divider(color: Colors.white70),
+                      const SizedBox(height: 24),
 
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'NGOs',
-                    icon: Icons.approval,
-                  ),
-                  const SizedBox(height: 16),
-                  buildMenuItem(
-                    text: 'Log out',
-                    icon: Icons.logout,
-                    onClicked: () => selectedItem(context, 0),
-                  ),
-                ]
-              )
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'NGOs',
+                        icon: Icons.approval,
+                      ),
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'Admin',
+                        icon: Icons.admin_panel_settings,
+                        onClicked: () => selectedItem(context, 0),
+                      ),
+                      const SizedBox(height: 16),
+                      buildMenuItem(
+                        text: 'Log out',
+                        icon: Icons.logout,
+                        onClicked: () => selectedItem(context, 0),
+                      ),
+                    ]
+                )
 
             ),
           ],
@@ -107,13 +113,13 @@ class NavigationDrawerWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    name,
-                    style: TextStyle(fontSize: 20, color: Colors.white)
+                      name,
+                      style: TextStyle(fontSize: 20, color: Colors.white)
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    id,
-                    style: TextStyle(fontSize:14, color: Colors.white)
+                      id,
+                      style: TextStyle(fontSize:14, color: Colors.white)
                   ),
                 ],
               ),
