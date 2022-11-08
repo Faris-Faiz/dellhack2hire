@@ -1,3 +1,6 @@
+import 'package:dellhack2hire/pages/home_page.dart';
+import 'package:dellhack2hire/pages/login_screen.dart';
+import 'package:dellhack2hire/pages/profile.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -14,13 +17,16 @@ class NavigationDrawerWidget extends StatelessWidget {
     return Drawer(
       child: Material(
         //color not decided: pls change RGB value :(
-        color: const Color.fromRGBO(50, 75, 205, 1),
+        color: Colors.blue,
         child: ListView(
           children: <Widget>[
             buildHeader(
               urlImage: urlImage,
               name: name,
               id: id,
+              onClicked: () => Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => Profile(),
+              )),
               // disabled no user page yet
               // onClicked: () => Navigator.of(context).push(MaterialPageRoute(
               //     builder: (context) => UserPage(//insert page here
@@ -36,25 +42,25 @@ class NavigationDrawerWidget extends StatelessWidget {
                 children: [
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'FAQs',
+                    icon: Icons.question_mark,
                     // onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'Tutorials',
+                    icon: Icons.book,
                     // onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'Settings',
+                    icon: Icons.settings,
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'Getting Here',
+                    icon: Icons.map,
                   ),
 
                   //Divider line
@@ -64,13 +70,14 @@ class NavigationDrawerWidget extends StatelessWidget {
 
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'About this app',
+                    icon: Icons.approval,
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'People',
-                    icon: Icons.people,
+                    text: 'Log out',
+                    icon: Icons.logout,
+                    onClicked: () => selectedItem(context, 0),
                   ),
                 ]
               )
@@ -111,11 +118,11 @@ class NavigationDrawerWidget extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              CircleAvatar(
-                radius: 24,
-                backgroundColor: Color.fromRGBO(30, 60, 168, 1),
-                child: Icon(Icons.add_comment_outlined, color: Colors.white)
-              )
+              // CircleAvatar(
+              //   radius: 24,
+              //   backgroundColor: Color.fromRGBO(30, 60, 168, 1),
+              //   child: Icon(Icons.add_comment_outlined, color: Colors.white)
+              // )
             ],
           ),
         ),
@@ -138,14 +145,15 @@ class NavigationDrawerWidget extends StatelessWidget {
   }
 
   // disabled as no pages created yet
-  // void selectedItem(BuildContext context, int index) {
-  //   switch (index) {
-  //     case 0:
-  //       Navigator.of(context).push(MaterialPageRoute(
-  //         builder: (context) => //insert page here,
-  //       ));
-  //       break;
-  //
-  //   }
-  // }
+  void selectedItem(BuildContext context, int index) {
+    Navigator.of(context).pop();
+    switch (index) {
+      case 0:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => LoginScreen(),
+        ));
+        break;
+
+    }
+  }
 }
