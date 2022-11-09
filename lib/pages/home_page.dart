@@ -17,8 +17,14 @@ class home_page extends StatefulWidget {
 class _home_pageState extends State<home_page> {
   @override
   Widget build(BuildContext context) {
-    final panelHeightOpened = MediaQuery.of(context).size.height * 0.70;
-    final panelHeightClosed = MediaQuery.of(context).size.height * 0.08;
+    final panelHeightOpened = MediaQuery
+        .of(context)
+        .size
+        .height * 0.70;
+    final panelHeightClosed = MediaQuery
+        .of(context)
+        .size
+        .height * 0.08;
     final panelController = PanelController();
 
     return DefaultTabController(
@@ -32,6 +38,7 @@ class _home_pageState extends State<home_page> {
             IconButton(
                 icon: Icon(Icons.notifications_none),
                 onPressed: () {
+                  onButtonPressed();
                   print('hello');
                 }),
             IconButton(
@@ -80,13 +87,35 @@ class _home_pageState extends State<home_page> {
           //     ),
           //   ),
           // ),
-          panelBuilder: (controller) => PanelWidget(
-            controller: controller,
-            panelController: panelController,
-          ),
+          panelBuilder: (controller) =>
+              PanelWidget(
+                controller: controller,
+                panelController: panelController,
+              ),
           borderRadius: BorderRadius.vertical(top: Radius.circular(18)),
         ),
       ),
     );
+  }
+
+  void onButtonPressed() {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return
+          Container(
+            child: Center(
+              child: Text(
+                "no notifications currently",
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
+      },
+    );
+  }
+
+  void _selectItem(String name) {
+    Navigator.pop(context);
   }
 }
