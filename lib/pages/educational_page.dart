@@ -6,7 +6,12 @@ class educational_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text('Education_Tab')),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/map2.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }

@@ -77,7 +77,7 @@ class PanelWidget extends StatelessWidget {
               'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cfe8cb0d-9849-4394-8ff3-0b9745005886/d1x9wpg-1e03642b-3805-4b2d-b769-0535f5e66f05.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2NmZThjYjBkLTk4NDktNDM5NC04ZmYzLTBiOTc0NTAwNTg4NlwvZDF4OXdwZy0xZTAzNjQyYi0zODA1LTRiMmQtYjc2OS0wNTM1ZjVlNjZmMDUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1TxKuG9ufE6Xi_nIkOvh_GX-jCRmyy-T-lrr8Jwvgyc',
               'https://static-cse.canva.com/blob/524424/Teal-and-Yellow-Church-Icon-Dots-Charity-Event-Fundraising-Poster.jpg',
               'https://piktochart.com/wp-content/uploads/2021/07/Save-the-Date-2.png',
-              'https://img.freepik.com/premium-vector/business-teamwork-building-poster_3870-742.jpg'].map((i) {
+              'https://d1csarkz8obe9u.cloudfront.net/posterpreviews/fun-run-marathon-poster-template-design-c81ae382f592330989abd9077fa69ee7_screen.jpg?ts=1637000742'].map((i) {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(

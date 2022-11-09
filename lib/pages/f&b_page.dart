@@ -6,7 +6,12 @@ class foodbeverages_page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: Text('Food & Beverages_Tab')),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/map3.png"),
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }
